@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  color-scheme: light;
+  --bg-page: #FAFAFC;
+  --text-page: #1D1D1F;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-page: #000000;
+  --text-page: #F5F5F7;
+}
+
+html.dark,
+.dark body {
+  background-color: #000000;
+  color: #F5F5F7;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAFAFC;
+  color: #1D1D1F;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .glass-nav {
+  background: rgba(18, 18, 20, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .glass-card {
+  background: rgba(28, 28, 30, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-dark {
+  background: rgba(29, 29, 31, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle Apple-style glow */
+.google-glow-blue {
+  box-shadow: 0 10px 40px -10px rgba(66, 133, 244, 0.25);
+}
+
+.google-glow-green {
+  box-shadow: 0 10px 40px -10px rgba(52, 168, 83, 0.25);
+}
+
+.google-glow-yellow {
+  box-shadow: 0 10px 40px -10px rgba(251, 188, 5, 0.25);
+}
+
+.google-glow-red {
+  box-shadow: 0 10px 40px -10px rgba(234, 67, 53, 0.25);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAFC;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D2D2D7;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3A3A3C;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #86868B;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #636366;
+}

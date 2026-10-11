@@ -1,0 +1,6 @@
+{
+  "name": "GDG on Campus - Techno India University",
+  "description": "Apple-style premium redesign for Google Developer Groups on Campus at Techno India University, Kolkata. Featuring upcoming events, tracks, student projects, organizers, and membership pass.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
